@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+</head>
+<body>
+<h1> Image filter</h1>
+<form action="download/" method="post">
+    {% csrf_token %}
+    <label for="keyword">Enter keyword: </label>
+    <input type="text" name="keyword" id="keyword">
+    <br>
+    <br>
+    <label for="num_of_images">Enter number of images required: </label>
+    <input type="number" name="num_of_images" id="num_of_images">
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
