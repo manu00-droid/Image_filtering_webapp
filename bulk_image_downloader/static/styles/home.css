@@ -1,0 +1,48 @@
+h3 {
+    margin-left: 50px;
+    color: #fffefe;
+    text-decoration-color: #fff;
+}
+
+form {
+    width: 500px;
+    margin-left: 200px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+form input[type="text"],
+form input[type="number"] {
+    width: 75%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #c0c5ca;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #000d1d;
+}
+
+#additionalText {
+    display: none;
+    color: red;
+    font-weight: bold;
+}
