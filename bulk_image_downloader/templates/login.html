@@ -1,0 +1,19 @@
+{%extends "base.html"%}
+{%block content%}
+
+
+<form action="http://127.0.0.1:8000/accounts/login/" method="POST">
+    {% csrf_token %}
+    <label for="username">Username : </label>
+    <input type="text" name="username" id="username" required>
+    <label for="password">Password : </label>
+    <input type="password" name="password" id="password" required>
+    <input type="submit" value="Login">
+    {%if messages%}
+    {%for message in messages%}
+    <p style="color: red;">{{message}}</p>
+    {%endfor%}
+    {%endif%}
+</form>
+
+{%endblock%}

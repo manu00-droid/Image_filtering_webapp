@@ -13,8 +13,7 @@ form {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-form input[type="text"],
-form input[type="number"] {
+form input {
     width: 75%;
     padding: 10px;
     display: flex;

@@ -7,20 +7,27 @@
     Keyword : <input type="text" id="keyword" name="image_keyword"><br>
     Count : <input type="number" id="numImages" name="num_images"><br>
     <p id="additionalText">you need to be a premium member to download above 60 images</p>
-    <input type="submit">
-    <!-- <div style="float:left;">
-        <label for="keyword">Keyword: </label>
-        <input id="imageKeyword" name="keyword" size="30" type="text" />
-    </div>
-
-    <div style="float:left;">
-        <label for="num">Number of images: </label>
-        <input id="imageNumber" name="num" size="30" type="text" />
-    </div>
-    <div class="clear">&nbsp;</div>
-    <div class="clear">&nbsp;</div>
-
-    <input type="submit"> -->
+    <input type="submit" id="submitButton">
 </form>
 
+<script>
+    document.getElementById("numImages").addEventListener("input", function () {
+        const inputValue = parseInt(this.value);
+        const certainValue = 60;
+
+        const additionalText = document.getElementById("additionalText");
+
+        if (inputValue > certainValue) {
+            additionalText.style.display = "block";
+            document.getElementById("submitButton").disabled = true;
+            document.getElementById("submitButton").style.cursor = "not-allowed";
+
+        } else {
+            additionalText.style.display = "none";
+            document.getElementById("submitButton").disabled = false;
+            document.getElementById("submitButton").style.cursor = "allowed";
+
+        }
+    });
+</script>
 {% endblock %}
