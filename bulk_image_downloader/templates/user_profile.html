@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if user.is_authenticated %}
+<div class="user_current_plan">
+    <div class="row">
+        <div class="column" style="background-color: black;">
+            <div class=" card">
+                <h3 style="background-color: black;">Current Plan</h3>
+                <p>Plan Name : {{user.current_plan}}</p>
+                {% if user.current_plan_expiry != 'None' %}
+                <p>Plan Expiry Date : {{user.current_plan_expiry}}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

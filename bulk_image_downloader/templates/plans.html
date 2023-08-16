@@ -1,29 +1,28 @@
 {% extends "base.html" %}
-
-<head>
-    <link rel="stylesheet" href="{% static 'styles/plans.css' %}">
-</head>
 {% block content %}
-{% if user.is_authenticated %}
-<div class="user_current_plan">
-    <div class="row">
-        <div class="column">
-            <div class="card">
-                <h3>Current Plan</h3>
-                <p>Plan Name : {{user.profile.plan}}</p>
-                <p>Plan Duration : {{user.profile.plan_duration}}</p>
-                <p>Plan Expiry Date : {{user.profile.plan_expiry_date}}</p>
-            </div>
+
+<div class="row">
+    <div class="column">
+        <div class="card">Free Plan</div>
+    </div>
+    <div class="column">
+        <div class="card">Premium Plan
+            <ul>
+                <li>Unlimited Downloads</li>
+                <li>Unlimited Threads</li>
+                <li>Unlimited Speed</li>
+                <li>Unlimited Storage</li>
+                <li>Unlimited Support</li>
+                <li>Unlimited Updates</li>
+                <li>Unlimited Features</li>
+                <li>Unlimited Everything</li>
+            </ul>
+        </div>
+        <div class="content">
+
+            <button href="payment_index.html" type="submit">Buy Now @ $9.99 only!</button>
         </div>
     </div>
 </div>
-{% endif %}
-<div class="row">
-    <div class="column">
-        <div class="card">..</div>
-    </div>
-    <div class="column">
-        <div class="card">..</div>
-    </div>
-</div>
+
 {% endblock %}

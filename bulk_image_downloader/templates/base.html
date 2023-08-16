@@ -8,20 +8,32 @@
     <title>Base Page</title>
     <link rel="stylesheet" href="{% static 'styles/base.css' %}">
     <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/plans.css' %}">
+    <style>
+        header p {
+            flex: auto;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            margin-left: 10px;
+            text-decoration: solid;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <a href="http://127.0.0.1:8000"><img class="logo" src="{% static 'images/logo.png' %}"
                 alt="Bulk Downloader"></a>
+        <p>Bulk Downloader</p>
         <nav>
             <ul class="nav_links">
                 <li><a href="#">About us</a></li>
                 {% if user.is_authenticated %}
-                <li><a href="#">Hello, {{user.username}}</a></li>
+                <li><a href="http://127.0.0.1:8000/accounts/current_user/">Hello, {{user.username}}</a></li>
                 <li><a href="http://127.0.0.1:8000/accounts/logout/">Logout</a></li>
                 {% else %}
-                <li><a href="http://127.0.0.1:8000/accounts/login/">Pricing</a></li>
+                <li><a href="http://127.0.0.1:8000/plans/">Pricing</a></li>
                 <li><a href="http://127.0.0.1:8000/accounts/login/">Login</a></li>
                 <li><a href="http://127.0.0.1:8000/accounts/register/">Register</a></li>
                 {% endif %}
